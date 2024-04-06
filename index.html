@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online C Compiler</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #editor { 
+            height: 400px; 
+            border-radius: 0.5rem;
+            background-color: #2e3440;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 font-mono">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl mb-6 text-center text-blue-400 font-bold">Online C Compiler</h1>
+
+        <div id="editor" class="shadow-lg">// Type your C code here\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}</div>
+        
+            
+            
+            <button id="runCode" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4 w-full shadow-lg">Run Code</button>
+            
+            <div id="output" class="mt-4 p-4 bg-gray-700 rounded shadow-lg">Output will be shown here...</div>
+            <textarea id="userInput" class="bg-gray-700 text-white p-2 rounded w-full h-24 mt-4" placeholder="Enter your inputs here, each on a new line."></textarea>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
